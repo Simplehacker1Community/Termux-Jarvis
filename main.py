@@ -12,22 +12,22 @@ time.sleep(1)
 print("\033[95m You said: ",str(inp))
 
 def system():
-     if inp == "hello Jarvis":
-         subprocess.call(["termux-tts-speak","hallow sir"])
+     if inp == "":
+         subprocess.call(["termux-tts-speak","please tell me something sir"])
 
-     elif "how are you Jarvis" in inp:
+     elif "how are you" in inp:
          subprocess.call(["termux-tts-speak","i am good what about you sir"])
      
-     elif "I am also good fine" in inp:
+     elif "good" in inp:
          subprocess.call(["termux-tts-speak","that's good sir"])
 
-     elif "who are you Jarvis" in inp:
+     elif "who are you" in inp:
          subprocess.call(["termux-tts-speak","I am Jarvis version 2.0 your personal assistanct sir"])
          
      elif "time" in inp:
          subprocess.call(["termux-tts-speak",t])
          
-     elif "what are you doing Jarvis" in inp:
+     elif "what are you doing" in inp:
         subprocess.call(["termux-tts-speak","i am busy with you sir "])
         
      elif "are you busy" in inp:
@@ -40,33 +40,33 @@ def system():
      elif "who made you" in inp:
          subprocess.call(["termux-tts-speak","made by shubhamg0sain"])
 
-     elif "Jarvis open YouTube" in inp:
+     elif "YouTube" in inp:
          subprocess.call(["termux-tts-speak","wait sir YouTube is opening now"])
          os.system("termux-open https://youtube.com")
          time.sleep(3)
          subprocess.call(["termux-tts-speak","now YouTube is successful open sir "])
 
  
-     elif "Jarvis open instagram" in inp:
+     elif "instagram" in inp:
          subprocess.call(["termux-tts-speak","wait sir instagram is opening now"])
          os.system("termux-open https://instagram.com")
          time.sleep(3)
          subprocess.call(["termux-tts-speak","now instagram is successful open sir "])
 
 
-     elif "Jarvis open facebook" in inp:
+     elif "facebook" in inp:
          subprocess.call(["termux-tts-speak","wait sir Facebook is opening now"])
          os.system("termux-open https://facebook.com")
          time.sleep(3)
          subprocess.call(["termux-tts-speak","now Facebook is successful open sir "])
 
-     elif "Jarvis open Google browser" in inp:
+     elif "Google" in inp:
          subprocess.call(["termux-tts-speak","wait sir Google is opening now"])
          os.system("termux-open https://www.google.co.in/")
          time.sleep(3)
          subprocess.call(["termux-tts-speak","now Google is successful open sir "])
 
-     elif "Jarvis close Jarvis" in inp:
+     elif "close" in inp:
          subprocess.call(["termux-tts-speak","ok sir wait a minute Jarvis is closing"])
          time.sleep(1)
          sys.exit()
