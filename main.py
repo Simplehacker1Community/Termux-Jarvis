@@ -25,14 +25,14 @@ def system():
          subprocess.call(["termux-tts-speak","now YouTube is successful open sir "])
 
  
-     elif "instagram" in inp:
+     elif "Instagram" in inp:
          subprocess.call(["termux-tts-speak","wait sir instagram is opening now"])
          os.system("termux-open https://instagram.com")
          time.sleep(3)
          subprocess.call(["termux-tts-speak","now instagram is successful open sir "])
 
 
-     elif "facebook" in inp:
+     elif "Facebook" in inp:
          subprocess.call(["termux-tts-speak","wait sir Facebook is opening now"])
          os.system("termux-open https://facebook.com")
          time.sleep(3)
