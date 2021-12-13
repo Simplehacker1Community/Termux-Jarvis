@@ -13,32 +13,10 @@ print("\033[95m You said: ",str(inp))
 
 def system():
      if inp == "":
-         subprocess.call(["termux-tts-speak","please tell me something sir"])
-
-     elif "how are you" in inp:
-         subprocess.call(["termux-tts-speak","i am good what about you sir"])
-     
-     elif "good" in inp:
-         subprocess.call(["termux-tts-speak","that's good sir"])
-
-     elif "who are you" in inp:
-         subprocess.call(["termux-tts-speak","I am Jarvis version 2.0 your personal assistanct sir"])
-         
-     elif "time" in inp:
          subprocess.call(["termux-tts-speak",t])
-         
-     elif "what are you doing" in inp:
-        subprocess.call(["termux-tts-speak","i am busy with you sir "])
-        
-     elif "are you busy" in inp:
-         subprocess.call(["termux-tts-speak","i am always free for you sir"])
-     
-     elif "what is your name" in inp:
-         subprocess.call(["termux-tts-speak","you can call me Jarvis "])
-     
-     
-     elif "who made you" in inp:
-         subprocess.call(["termux-tts-speak","made by shubhamg0sain"])
+
+     elif "hello" in inp:
+         subprocess.call(["termux-tts-speak","hallow sir "])
 
      elif "YouTube" in inp:
          subprocess.call(["termux-tts-speak","wait sir YouTube is opening now"])
@@ -66,10 +44,15 @@ def system():
          time.sleep(3)
          subprocess.call(["termux-tts-speak","now Google is successful open sir "])
 
+         
      elif "close" in inp:
-         subprocess.call(["termux-tts-speak","ok sir wait a minute Jarvis is closing"])
+         subprocess.call(["termux-tts-speak","ok sir wait a minute"])
          time.sleep(1)
          sys.exit()
+
+     elif "how are you" in inp:
+        subprocess.call(["termux-tts-speak","i am good sir what about you"])
+
      elif "battery" in inp:
          subprocess.call(["termux-battery-status"])
          
@@ -79,17 +62,55 @@ def system():
          
      elif "call me" in inp:
          os.system("termux-telephony-call +91")
+
      elif "torch on" in inp:
          os.system("termux-torch on")
      elif "torch off" in inp:
          os.system("termux-torch off")
-         
+     
+
      elif "contact" in inp:
          os.system("termux-contact-list")
+         
+     elif "who are you" in inp:
+         subprocess.call(["termux-tts-speak","I am Jarvis version 1.0 your personal assistanct sir"])
+         
+     elif "time" in inp:
+         subprocess.call(["termux-tts-speak",t])
+         
+     elif "what are you doing" in inp:
+        subprocess.call(["termux-tts-speak","i am busy with you "])
+        
+     elif "are you busy" in inp:
+         subprocess.call(["termux-tts-speak","i am always free for you"])
+     
+     elif "name" in inp:
+         subprocess.call(["termux-tts-speak","you can call me Jarvis "])
+     
+     
+     elif "who made you" in inp:
+         subprocess.call(["termux-tts-speak","made by shubham gosai"])
 
      elif "video" in inp:
          os.system("termux-open https://www.google.com/search?q=video")
      
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+ 
      else:
        subprocess.call(["termux-tts-speak","I am not cooded for that"])
 
