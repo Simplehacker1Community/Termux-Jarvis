@@ -9,11 +9,11 @@ print(t)
 
 inp = subprocess.getoutput("termux-speech-to-text")
 time.sleep(1)
-print("\033[95m You said: ",str(inp))
+print("......",str(inp))
 
 def system():
      if inp == "":
-         subprocess.call(["termux-tts-speak",t])
+         subprocess.call(["termux-tts-speak",'the time is',t])
 
      elif "hello" in inp:
          subprocess.call(["termux-tts-speak","hallow sir "])
