@@ -2,10 +2,6 @@ import time
 import datetime
 import os
 import subprocess
-
-
-
-os.system('screenfetch')
 print('\033[1m' + '\033[91m'+'     ///   create by @shubhamg0sain ///')
 def wish():
   h=int(datetime.datetime.now().hour)
