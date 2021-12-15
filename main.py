@@ -50,9 +50,6 @@ def system():
          time.sleep(1)
          sys.exit()
 
-     elif "how are you" in inp:
-        subprocess.call(["termux-tts-speak","i am good sir what about you"])
-
      elif "battery" in inp:
          subprocess.call(["termux-battery-status"])
          
