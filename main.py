@@ -19,44 +19,6 @@ time.sleep(1)
 print("......",str(inp))
 
 
-def instagram():
-    yn = subprocess.call(["termux-tts-speak","sir do you want to search any account"])
-    if 'yes' or 'Yes' in yn:
-        b = '/'
-        sp = subprocess.call(["termux-tts-speak","speak username"])
-        user = subprocess.getoutput("termux-speech-to-text")
-        subprocess.call(["termux-tts-speak","wait sir instagram is opening now"])
-        os.system("termux-open https://instagram.com" + b + user)
-    else:
-        subprocess.call(["termux-tts-speak","wait sir instagram is opening now"])
-        os.system("termux-open https://instagram.com")
-        time.sleep(3)
-        subprocess.call(["termux-tts-speak","now instagram is successful open sir "])
-    system()
-
-
-def youtube():
-    yn = subprocess.call(["termux-tts-speak","sir do you want to search anything"])
-    if 'yes' in yn:
-        b = '/'
-        sp = subprocess.call(["termux-tts-speak","speak username"])
-        user = subprocess.getoutput("termux-speech-to-text")
-        subprocess.call(["termux-tts-speak","wait sir youtube is opening now"])
-        os.system("termux-open https://youtube.com" + b + user)
-    else:
-        subprocess.call(["termux-tts-speak","wait sir YouTube is opening now"])
-        os.system("termux-open https://youtube.com")
-        time.sleep(3)
-        subprocess.call(["termux-tts-speak"," now YouTube is successful open sir"])
-    system()
-
-
-
-def security():
-    os.system("termux-fingerprint")
-    system()
-
-
 def add():
     subprocess.call(["termux-tts-speak",nt1])
     n1 = subprocess.getoutput("termux-speech-to-text")
@@ -138,22 +100,27 @@ def system():
          subprocess.call(["termux-tts-speak","hallow sir "])
 
      elif "YouTube" in inp:
-         youtube()
+         subprocess.call(["termux-tts-speak","wait sir YouTube is opening now"])
+         os.system("termux-open https://youtube.com/channel/UCB412-l6L5DsfEywMFFkBvw")
+         time.sleep(2)
+         subprocess.call(["termux-tts-speak"," now YouTube is successful open sir"])
  
-     elif "Instagram" in inp:
-         instagram()
-
+     elif "Instagram" in inp:      
+         subprocess.call(["termux-tts-speak","wait sir instagram is opening now"])
+         os.system("termux-open https://instagram.com/shubhamg0sai")
+         time.sleep(2)
+         subprocess.call(["termux-tts-speak","now instagram is successful open sir "])
 
      elif "Facebook" in inp:
          subprocess.call(["termux-tts-speak","wait sir Facebook is opening now"])
-         os.system("termux-open https://facebook.com")
-         time.sleep(3)
+         os.system("termux-open https://www.facebook.com/shubham.gosain.980")
+         time.sleep(2)
          subprocess.call(["termux-tts-speak","now Facebook is successful open sir "])
 
      elif "Google" in inp:
          subprocess.call(["termux-tts-speak","wait sir Google is opening now"])
          os.system("termux-open https://www.google.co.in/")
-         time.sleep(3)
+         time.sleep(2)
          subprocess.call(["termux-tts-speak","now Google is successful open sir "])
 
          
@@ -206,8 +173,8 @@ def system():
      elif "calculator" in inp:
          calculator()
 
-
-     
+     elif "fingerprint" in inp:
+         os.system("termux-fingerprint")
      
      
      
@@ -229,3 +196,4 @@ def system():
 system()
 
 os.system("python main.py")
+2
