@@ -88,7 +88,7 @@ def calculator():
         div()
     else:
         subprocess.call(["termux-tts-speak","wrong operator"])
-    calculator()
+    system()
 
 
 def system():
