@@ -18,6 +18,28 @@ inp = subprocess.getoutput("termux-speech-to-text")
 time.sleep(1)
 print("......",str(inp))
 
+
+def instagram():
+    subprocess.call(["termux-tts-speak","wait sir instagram is opening now"])
+    os.system("termux-open https://instagram.com")
+    time.sleep(3)
+    subprocess.call(["termux-tts-speak","now instagram is successful open sir "])
+    system()
+
+
+def youtube():
+    subprocess.call(["termux-tts-speak","wait sir YouTube is opening now"])
+    os.system("termux-open https://youtube.com")
+    time.sleep(3)
+    subprocess.call(["termux-tts-speak","now YouTube is successful open sir "])
+    system()
+
+
+def security():
+    os.system("termux-fingerprint")
+    system()
+
+
 def add():
     subprocess.call(["termux-tts-speak",nt1])
     n1 = subprocess.getoutput("termux-speech-to-text")
@@ -99,17 +121,10 @@ def system():
          subprocess.call(["termux-tts-speak","hallow sir "])
 
      elif "YouTube" in inp:
-         subprocess.call(["termux-tts-speak","wait sir YouTube is opening now"])
-         os.system("termux-open https://youtube.com")
-         time.sleep(3)
-         subprocess.call(["termux-tts-speak","now YouTube is successful open sir "])
-
+         youtube()
  
      elif "Instagram" in inp:
-         subprocess.call(["termux-tts-speak","wait sir instagram is opening now"])
-         os.system("termux-open https://instagram.com")
-         time.sleep(3)
-         subprocess.call(["termux-tts-speak","now instagram is successful open sir "])
+         instagram()
 
 
      elif "Facebook" in inp:
