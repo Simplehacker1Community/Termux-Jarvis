@@ -20,19 +20,36 @@ print("......",str(inp))
 
 
 def instagram():
-    subprocess.call(["termux-tts-speak","wait sir instagram is opening now"])
-    os.system("termux-open https://instagram.com")
-    time.sleep(3)
-    subprocess.call(["termux-tts-speak","now instagram is successful open sir "])
+    yn = subprocess.call(["termux-tts-speak","sir do you want to search any account"])
+    if 'yes' or 'Yes' in yn:
+        b = '/'
+        sp = subprocess.call(["termux-tts-speak","speak username"])
+        user = subprocess.getoutput("termux-speech-to-text")
+        subprocess.call(["termux-tts-speak","wait sir instagram is opening now"])
+        os.system("termux-open https://instagram.com" + b + user)
+    else:
+        subprocess.call(["termux-tts-speak","wait sir instagram is opening now"])
+        os.system("termux-open https://instagram.com")
+        time.sleep(3)
+        subprocess.call(["termux-tts-speak","now instagram is successful open sir "])
     system()
 
 
 def youtube():
-    subprocess.call(["termux-tts-speak","wait sir YouTube is opening now"])
-    os.system("termux-open https://youtube.com")
-    time.sleep(3)
-    subprocess.call(["termux-tts-speak","now YouTube is successful open sir "])
+    yn = subprocess.call(["termux-tts-speak","sir do you want to search anything"])
+    if 'yes' in yn:
+        b = '/'
+        sp = subprocess.call(["termux-tts-speak","speak username"])
+        user = subprocess.getoutput("termux-speech-to-text")
+        subprocess.call(["termux-tts-speak","wait sir youtube is opening now"])
+        os.system("termux-open https://youtube.com" + b + user)
+    else:
+        subprocess.call(["termux-tts-speak","wait sir YouTube is opening now"])
+        os.system("termux-open https://youtube.com")
+        time.sleep(3)
+        subprocess.call(["termux-tts-speak"," now YouTube is successful open sir"])
     system()
+
 
 
 def security():
