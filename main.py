@@ -101,19 +101,19 @@ def system():
 
      elif "YouTube" in inp:
          subprocess.call(["termux-tts-speak","wait sir YouTube is opening now"])
-         os.system("termux-open https://youtube.com/channel/UCB412-l6L5DsfEywMFFkBvw")
+         os.system("termux-open https://youtube.com/channel/UCY39DHibGoZxb8KcBODIwWg")
          time.sleep(2)
          subprocess.call(["termux-tts-speak"," now YouTube is successful open sir"])
  
      elif "Instagram" in inp:      
          subprocess.call(["termux-tts-speak","wait sir instagram is opening now"])
-         os.system("termux-open https://instagram.com/shubhamg0sai")
+         os.system("termux-open https://instagram.com/rajni.kant.mahato")
          time.sleep(2)
          subprocess.call(["termux-tts-speak","now instagram is successful open sir "])
 
      elif "Facebook" in inp:
          subprocess.call(["termux-tts-speak","wait sir Facebook is opening now"])
-         os.system("termux-open https://www.facebook.com/shubham.gosain.980")
+         os.system("termux-open https://www.facebook.com/mar.scientist.75")
          time.sleep(2)
          subprocess.call(["termux-tts-speak","now Facebook is successful open sir "])
 
